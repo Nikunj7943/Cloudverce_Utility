@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Cloudverce Utility
 
 Cloudverce Utility
@@ -38,3 +39,6 @@ This app can use GitHub Actions for CI. The following workflows are configured:
 ### License
 
 mit
+=======
+# Utility
+>>>>>>> 37eae4df5ba48af28658b0d7cd42b4bb7303ebd9

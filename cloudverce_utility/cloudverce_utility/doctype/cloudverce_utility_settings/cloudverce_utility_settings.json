@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-07-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "session_section",
+  "enable_session_timer",
+  "scope_section",
+  "scope_help",
+  "included_apps",
+  "included_modules",
+  "included_workspaces"
+ ],
+ "fields": [
+  {
+   "fieldname": "session_section",
+   "fieldtype": "Section Break",
+   "label": "Session Timer"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_session_timer",
+   "fieldtype": "Check",
+   "label": "Enable Session Timer"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "RBAC Scope"
+  },
+  {
+   "fieldname": "scope_help",
+   "fieldtype": "HTML",
+   "options": "<p class='text-muted'>A DocType is only manageable in a Cloudverce User Group's Permission Matrix if it actually has a shortcut in an included Workspace's sidebar -- add one with the \"+ Add DocType\" button on the Cloudverce User Group form (no need to open the Workspace Editor). Merely belonging to an installed app/module is NOT enough by itself. Every app, module and workspace below is included by default -- uncheck a row only if you want its workspaces excluded as a shortcut source. New apps/modules/workspaces are auto-added (checked) on every migrate.</p>"
+  },
+  {
+   "description": "Uncheck an app to exclude all of its Workspaces as a source of sidebar-shortcut DocTypes. Frappe itself is always excluded and never listed here.",
+   "fieldname": "included_apps",
+   "fieldtype": "Table",
+   "label": "Included Apps",
+   "options": "Cloudverce Utility Included App"
+  },
+  {
+   "description": "Uncheck a module to exclude its Workspaces as a shortcut source, even if its app is included.",
+   "fieldname": "included_modules",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Included Modules",
+   "options": "Cloudverce Utility Included Module"
+  },
+  {
+   "description": "Uncheck a workspace to stop its sidebar shortcuts from being manageable (Permission Matrix) or toggleable (Navigation Visibility) from Cloudverce User Group, even if its module is included.",
+   "fieldname": "included_workspaces",
+   "fieldtype": "Table",
+   "label": "Workspace Sidebar",
+   "options": "Cloudverce Utility Included Workspace"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-07-10 09:11:59.634917",
+ "modified_by": "Administrator",
+ "module": "Cloudverce Utility",
+ "name": "Cloudverce Utility Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

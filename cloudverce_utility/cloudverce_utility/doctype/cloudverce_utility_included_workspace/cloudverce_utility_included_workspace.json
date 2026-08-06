@@ -1,0 +1,54 @@
+{
+  "actions": [],
+  "creation": "2026-07-20 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "workspace_name",
+    "module_name",
+    "included",
+    "sidebar_shortcuts"
+  ],
+  "fields": [
+    {
+      "fieldname": "workspace_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Workspace",
+      "read_only": 1,
+      "reqd": 1
+    },
+    {
+      "fieldname": "module_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Module",
+      "read_only": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "included",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Included"
+    },
+    {
+      "description": "The actual DocTypes currently in this sidebar's real Desk navigation (Workspace Sidebar) -- read-only, refreshed on every migrate or via the \"Refresh Sidebar Preview\" button. Empty means this sidebar has no DocType entries yet; add one from a Cloudverce User Group form's \"+ Add DocType\" button.",
+      "fieldname": "sidebar_shortcuts",
+      "fieldtype": "Small Text",
+      "in_list_view": 1,
+      "label": "Sidebar Shortcuts",
+      "read_only": 1
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-07-20 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Cloudverce Utility",
+  "name": "Cloudverce Utility Included Workspace",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "creation",
+  "sort_order": "ASC"
+}
